@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Pagar
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-list>  
+      <ion-item>
+        <ion-label>
+          Códigos
+        </ion-label>
+
+        <ion-select [compareWith]="compareWith">
+          <ion-select-option *ngFor="let ticket of tickets">
+            {{ticket.codigo}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list> 
+    
+    <ion-button color="dark" size="small" expand="block" href="/total-pagar">Selecionar</ion-button>
+  </div>
+</ion-content>
