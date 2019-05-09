@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Pagamentos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <tr *ngFor="let item of lista">  
+    <ion-card>  
+          <ion-card-content>
+              <td>Ticket: {{item.ticket}}</td><br>
+              <td>Entrada: {{item.entrada}}</td><br>
+              <td>Saida: {{item.saida}}</td><br>
+              <td>Total: {{item.total}}</td>
+          </ion-card-content>
+        </ion-card>
+  </tr>
+</ion-content>
+
