@@ -11,8 +11,7 @@ import { Router } from '@angular/router';
 export class Tab1Page {
   ticket: any;
 
-  constructor(public estacionamentoService: EstacionamentoService,
-    private  router: Router) { 
+  constructor(public estacionamentoService: EstacionamentoService, private  router: Router) { 
       this.ticket = this.estacionamentoService.Iniciar(); 
     }
 

@@ -8,6 +8,7 @@ class Pagamento {
   public entrada: any;
   public saida: any;
   public total: any; 
+  public reais: any;
 }
 
 @Injectable({
@@ -41,6 +42,10 @@ export class EstacionamentoService {
     return this.novoPagamento.ticket;
   }
 
+  NumeroTicket(){
+    return this.novoPagamento.ticket;
+  }
+
   Calcular(entrada, saida){
     let e = new Date(entrada);
     let s = new Date(saida);
@@ -50,10 +55,11 @@ export class EstacionamentoService {
     return  t;
   }
 
-  Pagar(entrada: any, saida: any, total: any){
+  Pagar(entrada: any, saida: any, total: any, ticket: any){
     this.novoPagamento.entrada = entrada;
     this.novoPagamento.saida = saida;
     this.novoPagamento.total = total;
+    this.novoPagamento.ticket = ticket;
 
     this.meusPagamentos.push(    
       this.novoPagamento    

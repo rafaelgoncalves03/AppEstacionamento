@@ -6,8 +6,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <tr *ngFor="let item of lista">  
+<ion-content class="ion-padding">
+  <tr *ngFor="let item of (pagamentos | async)">  
     <ion-card>  
           <ion-card-content>
               <td>Ticket: {{item.ticket}}</td><br>
@@ -18,4 +18,3 @@
         </ion-card>
   </tr>
 </ion-content>
-

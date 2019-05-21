@@ -1,5 +1,7 @@
 {
   "name": "projeto-estacionamento",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
